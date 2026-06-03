@@ -1,0 +1,82 @@
+/* ========================================
+   PILL FILTER (pill-button/filter-tags/desktop)
+   ======================================== */
+
+.button--pill-filter {
+  display: flex;
+  height: 37px;
+  padding: 8px;
+
+  background: var(--button-pill-bg);
+  color: var(--button-pill-text);
+  border: 1px solid var(--button-pill-border);
+
+  border-radius: 999px;
+  margin: 0;
+}
+.button--pill-filter:hover {
+  background: var(--button-pill-bg-hover);
+  color: var(--button-pill-text-selected); 
+}
+
+.button--pill-filter.active,
+.button--pill-filter.is-selected {
+  background: var(--button-pill-bg-selected);
+  color: var(--button-pill-text-selected);
+  border-color: var(--button-pill-border-selected);
+}
+
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+}
+
+
+/* ========================================
+   PILL FILTER (pill-button/filter-tags/mobile)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .button--pill-filter {
+    height: 37px;
+    padding: 8px;
+    border-radius: 999px;
+  }
+  .filter-options {
+    gap: 12px;
+  }
+}
+
+/* ========================================
+   TAG: COURSE (tag-courses/desktop)
+   ======================================== */
+
+.tag-courses {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+
+  padding: 8px;
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-medium);
+  background: var(--color-secondary-100);
+  color: var(--text-default);
+
+  border-radius: 999px;
+}
+
+/* ========================================
+   TAG: COURSE (tag-courses/mobile)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .tag-courses {
+    padding: 6px;
+    font-size: var(--font-size-supporting);
+  }
+}

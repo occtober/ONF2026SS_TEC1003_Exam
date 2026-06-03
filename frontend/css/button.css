@@ -1,0 +1,205 @@
+/* ========================================
+   BUTTON BASE
+   ======================================== */
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto;
+
+  padding: 12px;
+  height: 45px;
+  width: fit-content;
+
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.module-nav {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto;
+
+  padding: 12px;
+  height: 45px;
+  width: fit-content;
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.module-nav .button {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.module-nav + .button {
+  margin-top: 16px;
+}
+
+.button:disabled,
+.button.is-disabled {
+  opacity: var(--button-disabled-opacity);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ========================================
+   BUTTON ICON
+   ======================================== */
+
+.button__icon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* ========================================
+   BUTTON: PRIMARY
+   ======================================== */
+
+.button--primary {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border-color: var(--button-primary-border);
+}
+
+.button--primary:hover {
+  background: var(--button-primary-bg-hover);
+}
+
+.button--primary.is-selected {
+  background: var(--button-primary-bg-selected);
+}
+
+/* ========================================
+   BUTTON: SECONDARY
+   ======================================== */
+
+.button--secondary {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  border-color: var(--button-secondary-border);
+}
+
+.button--secondary:hover {
+  color: var(--button-secondary-text-hover);
+  border-color: var(--button-secondary-border-hover);
+}
+
+.button--secondary.is-selected {
+  color: var(--button-secondary-text-selected);
+  border-color: var(--button-secondary-border-selected);
+}
+
+/* ========================================
+   BUTTON: GHOST
+   ======================================== */
+
+.button--ghost {
+  background: var(--button-ghost-bg);
+  color: var(--button-ghost-text);
+  border-color: transparent;
+}
+
+.button--ghost:hover {
+  color: var(--button-ghost-text-hover);
+}
+
+.button--ghost.is-selected {
+  color: var(--button-ghost-text-selected);
+}
+
+/* ========================================
+   BUTTONS (mobile)
+   ======================================== */
+
+@media (max-width: 768px) {
+  .button {
+    width: auto;
+    min-width: 0;
+    height: 37px;
+    padding: 8px;
+    gap: 10px;
+
+    border-radius: 6px;
+    font-size: var(--font-size-button);
+  }
+
+  .button__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .module-nav {
+    width: calc(100% - 32px);
+    flex-direction: row;
+    align-items: stretch;
+    gap: 8px;
+    padding: 16px;
+    margin: 0;
+  }
+
+  .module-nav .button {
+    flex: 1;
+    min-width: 0;
+    height: 37px;
+    padding: 8px;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+/* ========================================
+   Video button
+   ======================================== */
+  
+  .video-inner {
+  position: relative;
+   }
+
+   .video-thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+  }
+
+  .video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   }
