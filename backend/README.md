@@ -66,6 +66,7 @@ The backend runs locally at:
 
 - `GET /api/courses/1/modules/3`
   Returns module 3
+  
 - `GET /health
   Returns server status
   
