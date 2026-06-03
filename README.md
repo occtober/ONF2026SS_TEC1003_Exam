@@ -50,7 +50,7 @@ The backend handles course content and application data.
 
 **Data Files**
 
-* course.json
+* courses.json
 * modules.json
 * quiz-cards.json
 
