@@ -13,11 +13,10 @@ The frontend contains the user interface and styling of the platform.
 
 **Pages**
 
-* Landing page
-* Course detail page
-* Module pages
-* Module summary page
-* Course completion page
+* index.html - Landing page
+* course-detail.html - Course detail page
+* module1.html / module2.html - Module pages
+* module_summary.html / Module summary page/course completion
 
 **Styling**
 
