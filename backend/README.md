@@ -69,12 +69,29 @@ http://127.0.0.1:4000
 * `GET /health`
   Returns server status.
 
+## Architecture Overview
+
+The backend follows a simple API-based architecture.
+
+Course, module and quiz data are stored in JSON files within the data folder. Flask reads this data and provides it through API endpoints. The frontend requests the data and displays it through the user interface.
+
+This structure separates data management from the presentation layer, making the platform easier to maintain and extend.
+
 ## Data Flow
 
 1. Course, module and quiz content is stored in JSON files.
-2. Flask reads the JSON data.
-3. API endpoints return the data as JSON.
-4. The frontend can use this data to display courses, quiz cards and module content.
+2. Flask reads the JSON data when an endpoint is requested.
+3. API endpoints return the data as JSON responses.
+4. The frontend uses the responses to display course content, modules and quizzes.
+5. User interactions are handled in the frontend, while course content is supplied by the backend.
+
+## Key Technical Decisions
+
+* JSON files were used instead of a database to keep the project lightweight and appropriate for the project scope.
+* Flask was selected as a simple backend framework for serving course, module and quiz data.
+* Course, module and quiz content were separated into individual JSON files to improve organisation and maintainability.
+* Query parameter filtering was implemented to support course recommendations based on skill level.
+* The backend was designed to support future expansion by allowing additional courses and modules to be added through the data files.
 
 ## Notes
 
