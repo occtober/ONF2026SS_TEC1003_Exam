@@ -25,7 +25,7 @@ def get_courses():
     courses = load_json(COURSES_FILE)
     skill_level = request.args.get("skillLevel")
     if skill_level:
-        courses = [ c for c in courses if c["skillLevel"] == skill_level ]
+        courses = [ c for c in courses if c["skillLevel"].lower() == skill_level.lower() ]
     return jsonify(courses)    
 
 
