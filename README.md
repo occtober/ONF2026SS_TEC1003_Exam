@@ -120,7 +120,7 @@ Additional documentation is available within the project:
 
 ## Contributors
 
-* Shanti
+* Kalaisanthi
 * Jeanett
 
 ## Project Status
